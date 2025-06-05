@@ -1,0 +1,106 @@
+/* Desktop Navigation (Sidebar Menu) */
+#desktop-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: fixed;
+  z-index: 1000; /* Ensure it's above content */
+  right: 10px; /* Slightly more space */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+}
+
+.desktop-nav-item {
+  width: 45px; /* Slightly larger */
+  height: 45px;
+  border-radius: 50%; /* Fully rounded */
+  background-color: #2b2b2b;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.desktop-nav-item span { /* Material Icon */
+  color: white;
+  font-size: 22px; /* Slightly larger icon */
+  transition: color 0.3s ease;
+}
+
+.desktop-nav-item p { /* Tooltip Text */
+  position: absolute;
+  right: 100%; /* Start hidden to the left */
+  margin-right: 15px; /* Space between icon and text */
+  padding: 5px 10px;
+  background-color: #28e98c;
+  color: #1f1f1f; /* Dark text on light green */
+  border-radius: 4px;
+  font-size: 0.9rem; /* Smaller tooltip text */
+  white-space: nowrap; /* Prevent wrapping */
+  opacity: 0;
+  visibility: hidden; /* Use visibility for better transition */
+  transform: translateX(10px); /* Start slightly offset */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.desktop-nav-item:hover {
+  background-color: #333; /* Darken background on hover */
+}
+
+.desktop-nav-item:hover span {
+  color: #28e98c; /* Highlight icon color */
+}
+
+.desktop-nav-item:hover p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0); /* Slide in */
+}
+
+
+/* Mobile Navigation (Bottom Bar) */
+#mobile-navigation {
+  display: none; /* Hidden by default, shown via media query */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a; /* Slightly darker */
+  padding: 12px 0;
+  z-index: 1000; /* Ensure it's above content */
+  border-top: 1px solid #333;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+#mobile-navigation a {
+  flex: 1; /* Distribute space evenly */
+  text-align: center;
+  color: #ccc; /* Lighter grey */
+  text-decoration: none;
+  font-size: 26px; /* Larger icons */
+  transition: color 0.3s ease;
+}
+
+#mobile-navigation a:hover,
+#mobile-navigation a.active { /* Add active state indication */
+  color: #28e98c;
+}
+
+
+/* --- Responsive Navigation --- */
+
+/* Hide desktop nav, show mobile nav on smaller screens */
+@media (max-width: 768px) {
+  #desktop-navigation {
+    display: none;
+  }
+
+  #mobile-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+

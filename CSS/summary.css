@@ -1,0 +1,94 @@
+#hero-section {
+  /* Inherits base padding from .content-section in global.css */
+  min-height: 80vh; /* Ensure it takes significant viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+#hero-section h4 { /* "Hello, I am" */
+  font-size: 3.5rem; 
+  font-weight: 300;
+  margin-bottom: 10px; /* Space below */
+}
+
+#hero-section h1 { /* Name */
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.1; /* Adjust line height for multi-line */
+  margin-bottom: 20px; /* Space below name */
+}
+
+#hero-typing-text { /* Container for typed text */
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ccc; /* Slightly muted color */
+  min-height: 40px; /* Reserve space for text */
+}
+
+#hero-typing-text span#hero-typed-output {
+  color: #28e98c; /* Highlight the typed part */
+}
+
+/* --- Responsive Hero Section --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  #hero-section {
+    min-height: 70vh;
+  }
+
+  #hero-section h4 {
+    font-size: 3rem;
+  }
+
+  #hero-section h1 {
+    font-size: 3.5rem;
+  }
+
+  #hero-typing-text {
+    font-size: 1.6rem;
+    min-height: 35px;
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  #hero-section {
+    min-height: 60vh;
+    text-align: center; /* Center text on mobile */
+  }
+
+  #hero-section h4 {
+    font-size: 2.8rem; 
+  }
+
+  #hero-section h1 {
+    font-size: 3rem;
+  }
+
+  #hero-typing-text {
+    font-size: 1.4rem;
+    min-height: 30px;
+  }
+}
+
+/* Smaller Mobile Styles (<= 480px) */
+@media (max-width: 480px) {
+  #hero-section {
+    min-height: 50vh;
+  }
+
+  #hero-section h4 {
+    font-size: 2.5rem;
+  }
+
+  #hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero-typing-text {
+    font-size: 1.3rem;
+  }
+}
+

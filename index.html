@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hussain Jawaid - Portfolio</title>
+    <link rel="shortcut icon" href="images/favicon.png" sizes="32x32" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"> <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" /> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Modularized CSS -->
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/navigation.css" />
+    <link rel="stylesheet" href="CSS/sidebar.css" />
+    <link rel="stylesheet" href="CSS/summary.css" />
+    <link rel="stylesheet" href="CSS/about.css" />
+    <link rel="stylesheet" href="CSS/skills.css" />
+    <link rel="stylesheet" href="CSS/projects.css" />
+    <link rel="stylesheet" href="CSS/experience.css" />
+    <link rel="stylesheet" href="CSS/certificates.css" />
+    <link rel="stylesheet" href="CSS/contact.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+</head>
+
+<body> <!-- Desktop Navigation (Sidebar Menu) -->
+    <nav id="desktop-navigation">
+        <div class="desktop-nav-item">
+            <p>Home</p> <a href="#hero-section" aria-label="Go to Home section"><span
+                    class="material-symbols-outlined">home</span></a>
+        </div>
+        <div class="desktop-nav-item">
+            <p>About</p> <a href="#about-section" aria-label="Go to About section"><span
+                    class="material-symbols-outlined">person</span></a>
+        </div>
+        <div class="desktop-nav-item">
+            <p>Projects</p> <a href="#projects-section" aria-label="Go to Projects section"><span
+                    class="material-symbols-outlined">folder</span></a>
+        </div>
+        <div class="desktop-nav-item">
+            <p>Experience</p> <a href="#experience-section" aria-label="Go to Experience section"><span
+                    class="material-symbols-outlined">card_travel</span></a>
+        </div>
+        <div class="desktop-nav-item">
+            <p>Certificates</p> <a href="#certificates-section" aria-label="Go to Certificates section"><span
+                    class="material-symbols-outlined">trophy</span></a>
+        </div>
+        <div class="desktop-nav-item">
+            <p>Contact</p> <a href="#contact-section" aria-label="Go to Contact section"><span
+                    class="material-symbols-outlined">mail</span></a>
+        </div>
+    </nav> <!-- Mobile Navigation (Bottom Bar) -->
+    <nav id="mobile-navigation"> <a href="#hero-section" aria-label="Go to Home section"><span
+                class="material-symbols-outlined">home</span></a> <a href="#about-section"
+            aria-label="Go to About section"><span class="material-symbols-outlined">person</span></a> <a
+            href="#projects-section" aria-label="Go to Projects section"><span
+                class="material-symbols-outlined">folder</span></a> <a href="#experience-section"
+            aria-label="Go to Experience section"><span class="material-symbols-outlined">card_travel</span></a> <a
+            href="#contact-section" aria-label="Go to Contact section"><span
+                class="material-symbols-outlined">mail</span></a> </nav> <!-- Main Layout Container -->
+    <div id="portfolio-layout"> <!-- Sidebar -->
+        <aside id="sidebar">
+            <div id="profile-card">
+                <div id="profile-header">
+                    <p id="profile-name">Hussain Jawaid</p>
+                    <div id="profile-picture"> <img src="images/profile-pic.jpg"
+                            alt="Profile Picture of Hussain Jawaid" />
+                    </div>
+                </div>
+                <div id="profile-contact">
+                    <p id="profile-role">Python Backend Developer</p>
+                    <p id="profile-email">hussainjawaid.work<br>@gmail.com</p>
+                    <p id="profile-phone">+92 317-3919039</p>
+                    <div id="profile-socials"> <a href="https://www.linkedin.com/in/hussainjawaid/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn Profile"> <i
+                                class="fa-brands fa-linkedin-in"></i> </a> <a href="https://github.com/hussain-jawaid"
+                            target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"> <i
+                                class="fa-brands fa-github"></i> </a> </div> <button id="download-resume-button">Resume
+                        <span class="material-symbols-outlined">download</span></button>
+                </div>
+            </div>
+        </aside> <!-- Main Content Area -->
+        <main id="main-content"> <!-- Hero Section -->
+            <section class="content-section" id="hero-section">
+                <h4>Hello, <span>I am</span></h4>
+                <h1>Hussain Jawaid<br>Hashmi.</h1>
+                <h3 id="hero-typing-text"> <span id="hero-typed-output"></span> </h3>
+            </section> <!-- About Section -->
+            <section class="content-section" id="about-section">
+                <h4>About <span>Me</span></h4>
+                <p>I'm a Python developer with hands-on experience in building real-world projects using FastAPI,
+                    Streamlit, and SQL. I enjoy turning raw data into clean, useful insights and developing practical
+                    web apps that solve real problems. I've completed a technical internship, worked on data-driven and
+                    full-stack projects, and I'm always learning something new. My goal is simple: build things that
+                    work — cleanly, efficiently, and with purpose.</p>
+            </section> <!-- Skills Section -->
+            <section class="content-section" id="skills-section">
+                <h4>Tools & <span>Technologies</span></h4>
+                <div id="skills-grid">
+                    <p class="skill-badge">Python</p>
+                    <p class="skill-badge">SQL</p>
+                    <p class="skill-badge">JavaScript</p>
+                    <p class="skill-badge">HTML</p>
+                    <p class="skill-badge">CSS</p>
+                    <p class="skill-badge">FastAPI</p>
+                    <p class="skill-badge">Pandas</p>
+                    <p class="skill-badge">NumPy</p>
+                    <p class="skill-badge">Streamlit</p>
+                    <p class="skill-badge">MySQL</p>
+                    <p class="skill-badge">Git</p>
+                    <p class="skill-badge">GitHub</p>
+                </div>
+            </section> <!-- Projects Section -->
+            <section class="content-section" id="projects-section">
+                <h4>My <span>Projects</span></h4>
+                <div id="projects-grid">
+                    <div class="project-item">
+                        <div class="project-item-image"> <img src="project-covers/expense-tracking-system.png"
+                                alt="Expense Tracking System Screenshot"> </div>
+                        <p class="project-item-title">Expense Tracking System</p>
+                        <div class="project-item-footer"> <button class="project-item-button" id="Project1">See My
+                                Work</button>
+                            <div class="project-item-tech-icon"> <img src="images/python-logo.png" alt="Python Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-item-image"> <img src="project-covers/medical-data-extraction.png"
+                                alt="Medical Data Extraction Screenshot"> </div>
+                        <p class="project-item-title">Medical Data Extraction</p>
+                        <div class="project-item-footer"> <button class="project-item-button" id="Project2">See My
+                                Work</button>
+                            <div class="project-item-tech-icon"> <img src="images/python-logo.png" alt="Python Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-item-image"> <img src="project-covers/data-analysis-hospitality-domain.png"
+                                alt="Data Analysis Hospitality Domain Screenshot"> </div>
+                        <p class="project-item-title">Data Analysis in Hospitality Domain Using Pandas</p>
+                        <div class="project-item-footer"> <button class="project-item-button" id="Project3">See My
+                                Work</button>
+                            <div class="project-item-tech-icon"> <img src="images/python-logo.png" alt="Python Logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- Project Detail Overlays --> <!-- Project 1: Expense Tracking System -->
+            <div id="fullscreenOverlay_Project1" class="project-detail-overlay">
+                <div class="project-detail-card">
+                    <div class="project-detail-header">
+                        <p>Expense Tracking System</p>
+                        <p class="project-detail-close-button" aria-label="Close project details">&times;</p>
+                    </div>
+                    <div class="project-detail-content">
+                        <div class="project-detail-info">
+                            <div class="project-detail-tech">
+                                <p>Python Project</p> <img src="images/python-logo.png" alt="Python Logo"
+                                    class="project-detail-tech-icon">
+                            </div>
+                            <p class="project-detail-title">Expense Tracking System</p>
+                            <p class="project-detail-description">I built a full-stack expense tracking application
+                                using MySQL for data storage, FastAPI for the backend, and Streamlit for a user-friendly
+                                frontend. The app allows users to manage expenses and view detailed category-wise and
+                                month-wise summaries through interactive charts.</p>
+                            <div class="project-detail-links"> <a class="project-detail-link-button linkedin"
+                                    href="https://www.linkedin.com/posts/hussainjawaid_python-fastapi-streamlit-activity-7332294837024591872-4zRG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFZKG40BwaJ18pTlD1VSnUDNc8wIII_55wM"
+                                    target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin-in"></i>
+                                    View Project Engagement </a> <a class="project-detail-link-button github"
+                                    href="https://github.com/hussain-jawaid/expense-management-system" target="_blank"
+                                    rel="noopener noreferrer"> <i class="fa-brands fa-github"></i> View Project on
+                                    GitHub </a> </div>
+                        </div>
+                        <div class="project-detail-slider-container">
+                            <div class="image-slider">
+                                <div class="image-slider-track">
+                                    <img class="image-slider-image"
+                                        src="project-screenshots/expense-tracking-system/1.png"
+                                        alt="Expense Tracking System Slide 1" />
+                                    <img class="image-slider-image"
+                                        src="project-screenshots/expense-tracking-system/2.png"
+                                        alt="Expense Tracking System Slide 2" />
+                                    <img class="image-slider-image"
+                                        src="project-screenshots/expense-tracking-system/3.png"
+                                        alt="Expense Tracking System Slide 3" />
+                                </div>
+                                <button class="image-slider-prev" aria-label="Previous slide">&#10094;</button>
+                                <button class="image-slider-next" aria-label="Next slide">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Project 2: Medical Data Extraction -->
+            <div id="fullscreenOverlay_Project2" class="project-detail-overlay">
+                <div class="project-detail-card">
+                    <div class="project-detail-header">
+                        <p>Medical Data Extraction</p>
+                        <p class="project-detail-close-button" aria-label="Close project details">&times;</p>
+                    </div>
+                    <div class="project-detail-content">
+                        <div class="project-detail-info">
+                            <div class="project-detail-tech">
+                                <p>Python Project</p> <img src="images/python-logo.png" alt="Python Logo"
+                                    class="project-detail-tech-icon">
+                            </div>
+                            <p class="project-detail-title">Medical Data Extraction</p>
+                            <p class="project-detail-description">I developed a document extraction backend for AtliQ
+                                Insurance using Python, OpenCV, PyTesseract, Regex, and FastAPI, with a Streamlit UI,
+                                automating data capture from medical documents. This solution extracted key fields from
+                                images and saved the company $50K annually.</p>
+                            <div class="project-detail-links"> <a class="project-detail-link-button linkedin"
+                                    href="https://www.linkedin.com/posts/hussainjawaid_python-fastapi-streamlit-activity-7331934803912560640-mnso?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFZKG40BwaJ18pTlD1VSnUDNc8wIII_55wM"
+                                    target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin-in"></i>
+                                    View Project Engagement </a> <a class="project-detail-link-button github"
+                                    href="https://github.com/hussain-jawaid/medical-data-extraction" target="_blank"
+                                    rel="noopener noreferrer"> <i class="fa-brands fa-github"></i> View Project on
+                                    GitHub </a> </div>
+                        </div>
+                        <div class="project-detail-slider-container">
+                            <div class="image-slider">
+                                <div class="image-slider-track"> <img class="image-slider-image"
+                                        src="project-screenshots/medical-data-extraction/1.png"
+                                        alt="Medical Data Extraction Slide 1" /> <img class="image-slider-image"
+                                        src="project-screenshots/medical-data-extraction/2.png"
+                                        alt="Medical Data Extraction Slide 2" /> <img class="image-slider-image"
+                                        src="project-screenshots/medical-data-extraction/3.png"
+                                        alt="Medical Data Extraction Slide 3" /> <img class="image-slider-image"
+                                        src="project-screenshots/medical-data-extraction/4.png"
+                                        alt="Medical Data Extraction Slide 4" /> </div> <button
+                                    class="image-slider-prev" aria-label="Previous slide">&#10094;</button> <button
+                                    class="image-slider-next" aria-label="Next slide">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Project 3: Data Analysis in Hospitality Domain -->
+            <div id="fullscreenOverlay_Project3" class="project-detail-overlay">
+                <div class="project-detail-card">
+                    <div class="project-detail-header">
+                        <p>Data Analysis in Hospitality Domain Using Pandas</p>
+                        <p class="project-detail-close-button" aria-label="Close project details">&times;</p>
+                    </div>
+                    <div class="project-detail-content">
+                        <div class="project-detail-info">
+                            <div class="project-detail-tech">
+                                <p>Python Project</p> <img src="images/python-logo.png" alt="Python Logo"
+                                    class="project-detail-tech-icon">
+                            </div>
+                            <p class="project-detail-title">Data Analysis in Hospitality Domain Using Pandas</p>
+                            <p class="project-detail-description">I analyzed customer behavior and booking patterns
+                                using a star schema dataset, identifying root causes behind declining hotel revenue and
+                                market share. Using Pandas for data cleaning and Seaborn/Matplotlib for visualization, I
+                                uncovered key trends like peak booking periods and occupancy patterns.</p>
+                            <div class="project-detail-links"> <a class="project-detail-link-button linkedin"
+                                    href="https://www.linkedin.com/posts/hussainjawaid_dataanalysis-pandas-python-activity-7329774387258191872-Tt85?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFZKG40BwaJ18pTlD1VSnUDNc8wIII_55wM"
+                                    target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin-in"></i>
+                                    View Project Engagement </a> <a class="project-detail-link-button github"
+                                    href="https://github.com/hussain-jawaid/hotel-booking-data-analysis" target="_blank"
+                                    rel="noopener noreferrer"> <i class="fa-brands fa-github"></i> View Project on
+                                    GitHub </a> </div>
+                        </div>
+                        <div class="project-detail-slider-container">
+                            <div class="image-slider">
+                                <div class="image-slider-track"> <img class="image-slider-image"
+                                        src="project-screenshots/data-analysis/1.PNG" alt="Data Analysis Slide 1" />
+                                    <img class="image-slider-image" src="project-screenshots/data-analysis/2.PNG"
+                                        alt="Data Analysis Slide 2" /> <img class="image-slider-image"
+                                        src="project-screenshots/data-analysis/3.PNG" alt="Data Analysis Slide 3" />
+                                </div> <button class="image-slider-prev" aria-label="Previous slide">&#10094;</button>
+                                <button class="image-slider-next" aria-label="Next slide">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Experience Section -->
+            <section class="content-section" id="experience-section">
+                <h4>My <span>Experience</span></h4>
+                <div class="experience-item">
+                    <div class="experience-header"> <b>CodeAlpha</b> <span>Feb 2025 - Mar 2025</span> </div>
+                    <div class="experience-details">
+                        <p>● Developed hands-on <b>Python projects</b>, applying core concepts such as file handling and
+                            object-oriented programming <b>(OOP)</b>.</p>
+                        <p>● Strengthened <b>problem-solving</b> and <b>debugging</b> skills through self-driven tasks
+                            and code reviews.</p>
+                        <p>● Demonstrated consistency and dedication by completing a month-long structured virtual
+                            internship.</p>
+                    </div>
+                </div>
+            </section> <!-- Certificates Section -->
+            <section class="content-section" id="certificates-section">
+                <h4>Awards & <span>Certificates</span></h4>
+                <div id="certificates-grid">
+                    <div class="certificate-item">
+                        <div class="certificate-item-image"> <img src="certificate-images/python-course.jpg"
+                                alt="Python Course Certificate"> </div>
+                        <p class="certificate-item-title">Python: Beginner to Advanced For Data Professionals</p>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-item-image"> <img src="certificate-images/internship-completion.jpg"
+                                alt="CodeAlpha Internship Certificate"> </div>
+                        <p class="certificate-item-title">Internship Completion Certificate by CodeAlpha</p>
+                    </div>
+                </div>
+            </section> <!-- Certificate Fullscreen Overlay -->
+            <div id="certificate-overlay"> <span id="certificate-overlay-close"
+                    aria-label="Close certificate view">&times;</span> <img src="" alt="Enlarged certificate" /> </div>
+            <!-- Contact Section -->
+            <section class="content-section" id="contact-section">
+                <h4>Let's <span>Connect</span></h4>
+                <p id="contact-description">Feel free to get in touch with me. I am always open to discussing new
+                    projects, creative ideas or opportunities to be part of your visions.</p>
+                <div id="contact-methods-grid">
+                    <div id="mailCard" class="contact-method-card">
+                        <p class="contact-method-header"> <i class="fa-regular fa-envelope"></i> Mail Me </p>
+                        <p class="contact-method-link">hussainjawaid.work@gmail.com</p>
+                    </div>
+                    <div id="linkedinCard" class="contact-method-card">
+                        <p class="contact-method-header"> <i class="fa-brands fa-linkedin-in"></i> LinkedIn </p>
+                        <p class="contact-method-link">linkedin.com/in/hussainjawaid</p>
+                    </div>
+                    <div id="callCard" class="contact-method-card">
+                        <p class="contact-method-header"> <i class="fa-solid fa-phone-volume"></i> Call Me </p>
+                        <p class="contact-method-link">+92 317-3919039</p>
+                    </div>
+                    <div id="githubCard" class="contact-method-card">
+                        <p class="contact-method-header"> <i class="fa-brands fa-github"></i> GitHub </p>
+                        <p class="contact-method-link">github.com/hussain-jawaid</p>
+                    </div>
+                </div>
+            </section>
+        </main> <!-- End Main Content -->
+    </div> <!-- End Portfolio Layout --> <!-- Footer -->
+    <footer id="page-footer">
+        <p> © 2025 <span>Hussain Jawaid</span>. All Rights Reserved </p>
+        <div class="footer-design-credit"> <button>Design by <b>Hussain Jawaid</b></button> </div>
+        <p class="footer-feedback-link"> <a href="mailto:hussainjawaid.work@gmail.com"> <span>Suggestions</span> &
+                <span>Feedback</span> </a> </p>
+    </footer> <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+/**** Sidebar Styles ****/
+
+#sidebar {
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #1f1f1f; /* Match body background */
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+#profile-card {
+  width: 85%; /* Relative width */
+  max-width: 350px; /* Max width for larger screens */
+  height: auto; /* Auto height based on content */
+  border: 1px solid #444; /* Slightly lighter border */
+  border-radius: 25px; /* Consistent rounding */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #252525; /* Slightly different background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center header items */
+  gap: 20px;
+}
+
+#profile-name {
+  font-size: 1.8rem; /* Adjusted size */
+  font-weight: 400; /* Slightly bolder */
+  text-align: center;
+}
+
+#profile-picture {
+  width: 180px; /* Fixed size */
+  height: 180px;
+  border-radius: 20px; /* Match card rounding */
+  overflow: hidden;
+  border: 3px solid #444;
+}
+
+#profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#profile-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+#profile-role,
+#profile-email,
+#profile-phone {
+  font-size: 1rem; /* Consistent font size */
+  line-height: 1.5;
+}
+
+#profile-role {
+  font-weight: 300;
+  color: #ccc; /* Lighter color for role */
+  margin-bottom: 5px;
+}
+
+#profile-email,
+#profile-phone {
+  font-weight: 400;
+}
+
+#profile-socials {
+  display: flex;
+  justify-content: center; /* Center icons */
+  gap: 18px;
+  margin-top: 15px; /* Space above socials */
+}
+
+#profile-socials a {
+  width: 42px;
+  height: 42px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* LinkedIn */
+#profile-socials a[href*="linkedin"] {
+  color: #0A66C2;
+  border: 1px solid #0A66C2;
+}
+
+#profile-socials a[href*="linkedin"]:hover {
+  background-color: #0A66C2;
+  color: white;
+}
+
+/* GitHub */
+#profile-socials a[href*="github"] {
+  color: #3cc84f; /* Keep green for GitHub */
+  border: 1px solid #3cc84f;
+}
+
+#profile-socials a[href*="github"]:hover {
+  background-color: #3cc84f;
+  color: white;
+}
+
+#download-resume-button {
+  width: 100%;
+  border: none;
+  background-color: #28e98c;
+  border: 1px solid #28e98c;
+  color: #1f1f1f; /* Dark text */
+  padding: 14px 0;
+  border-radius: 50px;
+  margin-top: 20px; /* More space above button */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Space between text and icon */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#download-resume-button span { /* Material Icon */
+  font-size: 1.2rem;
+  line-height: 1; /* Align icon better */
+}
+
+#download-resume-button:hover {
+  background-color: transparent;
+  color: #28e98c;
+}
+
+/* --- Responsive Sidebar --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  #sidebar {
+    width: 35%; /* Slightly wider */
+    padding: 15px;
+  }
+
+  #profile-card {
+    width: 90%;
+    padding: 25px;
+    gap: 25px;
+  }
+
+  #profile-picture {
+    width: 160px;
+    height: 160px;
+  }
+
+  #profile-name {
+    font-size: 1.6rem;
+  }
+
+  #profile-role,
+  #profile-email,
+  #profile-phone {
+    font-size: 0.95rem;
+  }
+
+  #profile-socials a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  #download-resume-button {
+    padding: 12px 0;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: static; /* Remove sticky positioning */
+    padding: 40px 20px; /* Add vertical padding */
+  }
+
+  #profile-card {
+    width: 90%; /* Max width */
+    max-width: 400px; /* Limit width on mobile */
+    margin: 0 auto; /* Center card */
+    gap: 25px;
+  }
+
+  #profile-header {
+    gap: 15px;
+  }
+
+  #profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  #profile-name {
+    font-size: 1.7rem;
+  }
+}
+
+/* Smaller Mobile Styles (<= 480px) */
+@media (max-width: 480px) {
+  #sidebar {
+    padding: 30px 15px;
+  }
+
+  #profile-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  #profile-picture {
+    width: 130px;
+    height: 130px;
+  }
+
+  #profile-name {
+    font-size: 1.5rem;
+  }
+
+  #profile-role,
+  #profile-email,
+  #profile-phone {
+    font-size: 0.9rem;
+  }
+
+  #profile-socials {
+    gap: 15px;
+  }
+
+  #profile-socials a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  #download-resume-button {
+    padding: 11px 0;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+}
+

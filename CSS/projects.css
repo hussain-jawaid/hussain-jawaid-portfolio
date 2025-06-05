@@ -1,0 +1,508 @@
+#projects-section {
+  /* Inherits base padding from .content-section in global.css */
+}
+
+#projects-grid { /* Renamed from #projects */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px; /* Slightly larger gap */
+  margin-top: 30px;
+}
+
+.project-item { /* Renamed from .project-card */
+  width: calc(50% - 12.5px); /* Two columns with gap */
+  max-width: 400px; /* Max width per item */
+  min-height: 370px; /* Keep min height */
+  border: 1px solid #444;
+  border-radius: 16px;
+  padding: 8px; /* Padding around image/content */
+  transition: border-color 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Stack image, title, footer */
+  background-color: #252525;
+}
+
+.project-item:hover {
+  border-color: #28e98c;
+}
+
+.project-item:hover .project-item-button { /* Renamed from .btn-tool button */
+  border-color: #28e98c;
+  color: #28e98c;
+  background-color: rgba(40, 233, 140, 0.1); /* Subtle background on hover */
+}
+
+.project-item-image { /* Renamed from .project-img */
+  width: 100%;
+  height: 200px;
+  border-radius: 12px; /* Rounded corners inside padding */
+  overflow: hidden; /* Ensure image stays within bounds */
+}
+
+.project-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area */
+  display: block; /* Remove bottom space */
+  border-radius: 12px;
+}
+
+.project-item-title { /* Renamed from .project-title */
+  font-size: 1.3rem;
+  padding: 15px 15px 10px 15px; /* Padding around title */
+  flex-grow: 1; /* Allow title area to grow */
+  font-weight: 500;
+}
+
+.project-item-footer { /* Renamed from .btn-tool */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 15px 15px; /* Padding for footer */
+  margin-top: auto; /* Push footer to bottom */
+}
+
+.project-item-button { /* Renamed from .btn-tool button */
+  border: 1px solid #565656;
+  background-color: transparent;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.project-item-tech-icon { /* Renamed from .btn-tool .tool */
+  width: 35px;
+  height: 35px;
+}
+
+.project-item-tech-icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* --- Project Detail Overlay Styles --- */
+
+.project-detail-overlay { /* Renamed from .project-overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker overlay */
+  display: none; /* Initially hidden - controlled by JS */
+  justify-content: center;
+  align-items: center; /* Center card vertically */
+  z-index: 9999;
+  overflow-y: auto; /* Enable scroll if content overflows */
+  padding: 40px 20px; /* Padding around the card */
+}
+
+.project-detail-card { /* Renamed from .overlay-card */
+  width: 90%;
+  max-width: 1100px; /* Max width for the card */
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  padding: 0; /* Remove padding, handle inside */
+  border: 1px solid #444;
+  overflow: hidden; /* Clip content to rounded corners */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-detail-header { /* Renamed from .project-header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding: 15px 30px;
+  background-color: #252525; /* Header background */
+}
+
+.project-detail-header p:first-child { /* Header Title */
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.project-detail-close-button { /* Renamed from .closeBtnProjectCard */
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.project-detail-close-button:hover {
+  color: #fff;
+}
+
+.project-detail-content { /* Renamed from .project-container */
+  display: flex;
+  padding: 30px;
+  gap: 40px;
+}
+
+.project-detail-info { /* Renamed from .project-info */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-detail-tech { /* Renamed from .tool-image */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Space below tech */
+}
+
+.project-detail-tech p { /* Tech Label (e.g., Python Project) */
+  background-color: rgba(40, 233, 140, 0.15); /* Lighter green background */
+  color: #28e98c;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-detail-tech-icon { /* Class for tech icons */
+  width: 35px;
+  height: auto;
+}
+
+.project-detail-title { /* Renamed from .project-title-big */
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.project-detail-description { /* Renamed from .project-description */
+  color: #d4d7e5;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.project-detail-links { /* Renamed from .social-handles */
+  display: flex;
+  gap: 15px;
+  margin-top: 15px; /* Space above links */
+}
+
+.project-detail-link-button { /* Renamed from .social-btn */
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex; /* Use inline-flex */
+  align-items: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-detail-link-button i { /* Icon within button */
+  font-size: 1.3rem;
+}
+
+/* LinkedIn Button */
+.project-detail-link-button.linkedin {
+  background-color: #0A66C2;
+  color: white;
+}
+
+.project-detail-link-button.linkedin:hover {
+  border-color: #0A66C2;
+  background-color: transparent;
+  color: #0A66C2;
+}
+
+/* GitHub Button */
+.project-detail-link-button.github {
+  background-color: #3cc84f;
+  color: white;
+}
+
+.project-detail-link-button.github:hover {
+  border-color: #3cc84f;
+  background-color: transparent;
+  color: #3cc84f;
+}
+
+/* --- Image Slider Styles --- */
+
+.project-detail-slider-container { /* Renamed from .project-images */
+  width: 50%;
+  min-height: 400px; /* Ensure minimum height */
+}
+
+.image-slider { /* Renamed from .slider */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-slider-track { /* Renamed from .slides */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.image-slider-image { /* Renamed from .slides img */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Use contain to see full image */
+  flex-shrink: 0;
+  display: block;
+}
+
+.image-slider button { /* Base style for prev/next */
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00000099;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.image-slider button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-slider-prev { /* Renamed from .prev */
+  left: 15px;
+}
+
+.image-slider-next { /* Renamed from .next */
+  right: 15px;
+}
+
+/* --- Responsive Projects Section & Overlay --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  #projects-grid {
+    justify-content: space-around; /* Better spacing */
+  }
+
+  .project-item {
+    width: calc(50% - 15px); /* Adjust width for gap */
+    max-width: none; /* Remove max-width */
+    min-height: auto; /* Auto height */
+  }
+
+  .project-item-image {
+    height: 180px;
+  }
+
+  .project-detail-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+  }
+
+  .project-detail-info,
+  .project-detail-slider-container {
+    width: 100%;
+  }
+
+  .project-detail-slider-container {
+    min-height: 350px;
+    margin-top: 0; /* Remove margin */
+  }
+
+  .project-detail-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  #projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .project-item {
+    width: 95%; /* Almost full width */
+  }
+
+  .project-item-image {
+    height: 160px;
+  }
+
+  .project-item-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .project-item-button {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .project-item-tech-icon {
+    align-self: flex-end; /* Move icon to right */
+  }
+
+  .project-detail-overlay {
+    padding: 20px 10px;
+  }
+
+  .project-detail-card {
+    width: 95%;
+  }
+
+  .project-detail-header {
+    padding: 12px 20px;
+  }
+
+  .project-detail-header p:first-child {
+    font-size: 1.2rem;
+  }
+
+  .project-detail-content {
+    padding: 20px;
+  }
+
+  .project-detail-title {
+    font-size: 1.6rem;
+  }
+
+  .project-detail-description {
+    font-size: 0.95rem;
+  }
+
+  .project-detail-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-detail-link-button {
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 11px 20px;
+  }
+
+  .project-detail-slider-container {
+    min-height: 300px;
+  }
+
+  .image-slider button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+  .image-slider-prev { left: 10px; }
+  .image-slider-next { right: 10px; }
+}
+
+/* Smaller Mobile Styles (<= 480px) */
+@media (max-width: 480px) {
+  .project-item {
+    width: 100%;
+  }
+
+  .project-item-image {
+    height: 140px;
+  }
+
+  .project-item-title {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .project-item-footer {
+    padding: 10px;
+  }
+
+  .project-item-button {
+    font-size: 0.9rem;
+    padding: 9px 18px;
+  }
+
+  .project-item-tech-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .project-detail-card {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .project-detail-header {
+    padding: 10px 15px;
+  }
+
+  .project-detail-header p:first-child {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-close-button {
+    font-size: 2rem;
+  }
+
+  .project-detail-content {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .project-detail-title {
+    font-size: 1.4rem;
+  }
+
+  .project-detail-description {
+    font-size: 0.9rem;
+  }
+
+  .project-detail-tech p {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .project-detail-tech-icon {
+    width: 30px;
+  }
+
+  .project-detail-link-button {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+    gap: 8px;
+  }
+
+  .project-detail-link-button i {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-slider-container {
+    min-height: 250px;
+  }
+
+  .image-slider button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+  }
+}
+

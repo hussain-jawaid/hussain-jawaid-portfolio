@@ -1,0 +1,99 @@
+#experience-section {
+  /* Inherits base padding from .content-section in global.css */
+}
+
+.experience-item { /* Renamed from .job-box */
+  margin-top: 30px; /* Space below heading */
+  border-left: 3px solid #28e98c; /* Add a visual indicator */
+  padding-left: 20px;
+}
+
+.experience-header { /* Renamed from .company-title */
+  font-size: 1.4rem; /* Adjusted size */
+  padding-bottom: 5px; /* Space below header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 10px; /* Gap between title and date */
+}
+
+.experience-header b { /* Company Name */
+  font-weight: 600;
+}
+
+.experience-header span { /* Date Range */
+  color: #bbb !important; /* Use !important carefully, inherited from .section span */
+  font-size: 0.95rem !important;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.experience-details p { /* Renamed from .about-job p */
+  font-size: 1.05rem; /* Adjusted size */
+  padding: 8px 0; /* Space between points */
+  line-height: 1.6;
+  color: #d4d7e5;
+}
+
+.experience-details p b {
+  font-weight: 500;
+  color: #fff; /* Highlight bold text */
+}
+
+/* --- Responsive Experience Section --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  .experience-header {
+    font-size: 1.3rem;
+  }
+
+  .experience-header span {
+    font-size: 0.9rem !important;
+  }
+
+  .experience-details p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  .experience-item {
+    margin-top: 20px;
+    padding-left: 15px;
+  }
+
+  .experience-header {
+    font-size: 1.2rem;
+    flex-direction: column; /* Stack title and date */
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .experience-header span {
+    font-size: 0.85rem !important;
+  }
+
+  .experience-details p {
+    font-size: 0.95rem;
+    padding: 6px 0;
+  }
+}
+
+/* Smaller Mobile Styles (<= 480px) */
+@media (max-width: 480px) {
+  .experience-header {
+    font-size: 1.1rem;
+  }
+
+  .experience-header span {
+    font-size: 0.8rem !important;
+  }
+
+  .experience-details p {
+    font-size: 0.9rem;
+  }
+}
+

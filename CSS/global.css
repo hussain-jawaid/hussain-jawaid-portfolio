@@ -1,0 +1,112 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif; /* Consider moving font links to HTML head if not already there */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh; /* Use min-height for flexibility */
+  background-color: #1f1f1f;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Common Section Styling */
+.content-section {
+  width: 100%;
+  min-height: 50vh; /* Give sections some minimum height */
+  padding: 70px 85px 80px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-section h4 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 20px; /* Add some space below headings */
+}
+
+.content-section h4 span {
+  color: #28e98c;
+}
+
+/* --- Responsive Global Adjustments --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  .content-section {
+    padding: 60px 30px 60px 30px; /* Adjusted padding */
+  }
+
+  .content-section h4 {
+    font-size: 2.5rem; /* Slightly smaller headings */
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  .content-section {
+    min-height: auto; /* Allow sections to shrink on mobile */
+    padding: 40px 20px; /* Further reduced padding */
+  }
+
+  .content-section h4 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Smaller Mobile Styles (<= 480px) */
+@media (max-width: 480px) {
+  .content-section {
+    padding: 30px 15px; /* Minimal padding */
+  }
+
+  .content-section h4 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+/**** Main Layout Styles ****/
+
+#portfolio-layout {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allows sidebar and main content to wrap on smaller screens if needed */
+}
+
+#main-content { /* Container for all sections except sidebar */
+  width: 70%;
+  flex-grow: 1; /* Allow main content to take remaining space */
+}
+
+/* --- Responsive Layout Adjustments --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  /* Sidebar width is handled in sidebar.css (set to 35%) */
+  #main-content {
+    width: 65%; /* Adjust main content width to complement sidebar */
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  #portfolio-layout {
+    flex-direction: column; /* Stack sidebar and main content vertically */
+  }
+  /* Sidebar width is handled in sidebar.css (set to 100%) */
+  #main-content {
+    width: 100%; /* Main content takes full width when stacked */
+  }
+}
+

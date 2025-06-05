@@ -1,0 +1,71 @@
+#skills-section {
+  /* Inherits base padding from .content-section in global.css */
+}
+
+#skills-grid { /* Renamed from #skills */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Slightly adjusted gap */
+  margin-top: 30px; /* Space below heading */
+  padding-right: 15%; /* Limit width slightly on large screens */
+}
+
+.skill-badge { /* Kept class name for simplicity, but could be .skill-item */
+  background-color: transparent; /* Explicitly transparent */
+  border-radius: 8px;
+  padding: 14px 22px; /* Adjusted padding */
+  font-size: 1.1rem; /* Adjusted size */
+  font-weight: 400;
+  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+  border: 2px solid #565656;
+  color: #e2e5f1;
+  cursor: default; /* Indicate non-interactive */
+}
+
+.skill-badge:hover {
+  color: #28e98c;
+  border-color: #28e98c;
+}
+
+/* --- Responsive Skills Section --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  #skills-grid {
+    padding-right: 5%; /* Less padding */
+    gap: 1.2rem;
+  }
+
+  .skill-badge {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  #skills-grid {
+    padding-right: 0; /* No padding */
+    justify-content: center; /* Center badges */
+    gap: 1rem;
+    margin-top: 20px;
+  }
+
+  .skill-badge {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Smaller Mobile Styles (<= 480px) */
+@media (max-width: 480px) {
+  #skills-grid {
+    gap: 0.8rem;
+  }
+
+  .skill-badge {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+

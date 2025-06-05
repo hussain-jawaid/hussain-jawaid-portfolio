@@ -1,0 +1,37 @@
+#about-section {
+  /* Inherits base padding from .content-section in global.css */
+  padding-bottom: 40px; /* Add some bottom padding */
+}
+
+#about-section p {
+  font-size: 1.2rem;
+  line-height: 1.7; /* Slightly more line spacing */
+  color: #e0e0e0; /* Slightly lighter text */
+  max-width: 800px; /* Limit width for readability */
+}
+
+/* --- Responsive About Section --- */
+
+/* Tablet Styles (<= 1024px) */
+@media (max-width: 1024px) {
+  #about-section p {
+    font-size: 1.1rem;
+    max-width: 100%; /* Allow full width */
+  }
+}
+
+/* Mobile Styles (<= 768px) */
+@media (max-width: 768px) {
+  #about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Smaller Mobile Styles (<= 480px) */
+@media (max-width: 480px) {
+  #about-section p {
+    font-size: 0.95rem;
+  }
+}
+
