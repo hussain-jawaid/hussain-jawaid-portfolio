@@ -23,9 +23,9 @@ function Hero() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex h-11 w-[50%] items-center gap-2 rounded-full bg-[#D3E97A] px-5 font-semibold text-black md:h-12 md:w-fit md:text-base"
+            className="group flex h-11 w-fit items-center gap-2 rounded-full bg-[#D3E97A] px-5 font-semibold text-black md:h-12 md:w-fit md:text-base"
           >
-            <span className="text-[11px] font-semibold">DOWNLOAD RESUME</span>
+            <span className="font-semibold">MY RESUME</span>
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black text-white transition-all duration-300 group-hover:h-9 group-hover:w-9 md:h-[12px] md:w-[12px]">
               <span className="text-[1rem] opacity-100 transition-all duration-300 md:text-[.1rem] md:opacity-0 md:group-hover:text-[1.5rem] md:group-hover:opacity-100">
                 <MdOutlineFileDownload />
