@@ -20,3 +20,29 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+/* Hide scrollbar on mobile (up to 767px width) */
+@media screen and (max-width: 767px) {
+  body {
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+}
+
+/* Hide scrollbar on iPads (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
