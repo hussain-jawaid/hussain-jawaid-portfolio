@@ -8,7 +8,8 @@ function Skills() {
     "Tailwind",
     "css",
     "Pandas",
-    "Matplotlib/seaborn",
+    "Matplotlib",
+    "seaborn",
     "MySQL",
     "Streamlit",
     "NumPy",
@@ -34,7 +35,7 @@ function Skills() {
           {skills.map((item, index) => (
             <span
               key={index}
-              className="rounded-full border border-[#484848] px-11 py-4 text-white"
+              className="rounded-full border border-[#484848] px-8 py-3 md:px-11 md:py-4 text-white"
             >
               {item.toUpperCase()}
             </span>
