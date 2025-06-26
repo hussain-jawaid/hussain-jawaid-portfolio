@@ -57,7 +57,7 @@ function Hero() {
       <div className="h-[400px] w-full overflow-hidden rounded-2xl sm:h-[500px] md:h-[550px] lg:w-1/2">
         <img
           src="/project-image.jpg"
-          className="h-full w-full object-cover"
+          className="mx-auto h-full w-full object-cover md:mx-auto"
           alt="Hussain Jawaid"
         />
       </div>

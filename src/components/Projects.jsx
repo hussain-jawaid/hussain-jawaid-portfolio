@@ -10,6 +10,7 @@ function Projects() {
       role: "Front-end Developer",
       githubURL: "https://github.com/hussain-jawaid/docs-app",
       demo: { isAvailable: true, link: "https://docs-app-six.vercel.app/" },
+      tech: "ReactJs • Tailwind CSS • Frame Motion",
     },
     {
       imgPath: "/projects/expense-tracking-system.png",
@@ -19,6 +20,7 @@ function Projects() {
       role: "Backend Developer",
       githubURL: "https://github.com/hussain-jawaid/expense-management-system",
       demo: { isAvailable: false, link: "" },
+      tech: "FastAPI • MySQL • Streamlit",
     },
     {
       imgPath: "/projects/medical-data-extraction.png",
@@ -28,6 +30,7 @@ function Projects() {
       role: "Backend Developer",
       githubURL: "https://github.com/hussain-jawaid/medical-data-extraction",
       demo: { isAvailable: false, link: "" },
+      tech: "OpenCV • PyTesseract • Regex • FastAPI • Streamlit",
     },
   ];
 

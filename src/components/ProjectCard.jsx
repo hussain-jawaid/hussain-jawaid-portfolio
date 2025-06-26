@@ -6,7 +6,7 @@ function ProjectCard({ data }) {
     <div className="card flex flex-col justify-between gap-6 pt-4 md:flex-row">
       {/* Left — Project Image */}
       <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[#1a1a1a] transition-all duration-300 md:w-[48.5%] md:hover:-translate-y-3 md:hover:bg-[#2b2b2b]">
-        <div className="h-[250px] w-[320px] overflow-hidden rounded-3xl border-2 border-black md:h-[320px] md:w-[450px]">
+        <div className="h-full w-full overflow-hidden rounded-2xl border-black md:h-[320px] md:w-[450px] md:border-2">
           <img
             src={data.imgPath}
             alt={data.heading}
@@ -39,6 +39,11 @@ function ProjectCard({ data }) {
           <div className="flex items-center justify-between border-b border-[#484848] pb-3 pt-5 text-sm">
             <h5 className="font-light text-white">Role</h5>
             <h5 className="font-light text-[#C7C7C7]">{data.role}</h5>
+          </div>
+
+          <div className="flex items-center justify-between border-b border-[#484848] pb-3 pt-5 text-sm">
+            <h5 className="font-light text-white">Tech Stack</h5>
+            <h5 className="font-light text-[#C7C7C7]">{data.tech}</h5>
           </div>
         </div>
 
