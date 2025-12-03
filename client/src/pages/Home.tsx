@@ -47,6 +47,12 @@ export default function Home() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-6">
               <a
+                href="#about"
+                className="text-sm hover:text-accent transition-colors"
+              >
+                About
+              </a>
+              <a
                 href="#skills"
                 className="text-sm hover:text-accent transition-colors"
               >
@@ -110,6 +116,13 @@ export default function Home() {
                     className="text-base hover:text-accent transition-colors py-2"
                   >
                     Home
+                  </a>
+                  <a
+                    href="#about"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-base hover:text-accent transition-colors py-2"
+                  >
+                    About
                   </a>
                   <a
                     href="#skills"
@@ -199,6 +212,50 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg transform rotate-45"></div>
             <div className="absolute inset-8 border-2 border-accent/30 rounded-lg"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-accent/20 rounded-full"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="container py-24 gap-12 items-center"
+      >
+        <div className="space-y-6">
+          <h2 className="text-4xl font-bold">About Me</h2>
+          <p className="text-lg text-muted-foreground">
+            I'm Hussain Jawaid, an aspiring AI Engineer with a strong foundation
+            in programming, problem-solving, and applied machine learning.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            My journey began at 16 when I started teaching myself to code and
+            explored web development, graphic design, video editing, and data
+            analysis. These experiences gave me a broad technical base and
+            helped shape my creative approach to solving problems.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            I developed a deep interest in AI after taking Andrew Ng’s AI for
+            Everyone course, which led me to build projects like McCarthy.ai, a
+            ChatGPT-inspired system that introduced me to conversational AI and
+            API-driven development.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            Today, I'm focused on Machine Learning, Deep Learning, and
+            Generative AI, consistently learning and working on projects that
+            strengthen my technical abilities. I enjoy engaging with the AI
+            community and exploring ideas that contribute to the future of
+            intelligent systems.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
+              Fast learner
+            </span>
+            <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
+              Collaborative teammate
+            </span>
+            <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
+              Systems thinker
+            </span>
           </div>
         </div>
       </section>
