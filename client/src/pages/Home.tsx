@@ -201,7 +201,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Download Resume
+                View Resume
               </a>
             </Button>
           </div>
