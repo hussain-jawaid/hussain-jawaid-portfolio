@@ -198,7 +198,8 @@ export default function Home() {
             <Button variant="outline" asChild>
               <a
                 href="/Hussain-Jawaid-Resume.pdf"
-                download="Hussain-Jawaid-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Download Resume
               </a>
@@ -217,10 +218,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section
-        id="about"
-        className="container py-24 gap-12 items-center"
-      >
+      <section id="about" className="container py-24 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-4xl font-bold">About Me</h2>
           <p className="text-lg text-muted-foreground">
