@@ -321,7 +321,14 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">McCarthy.ai</h3>
                 <p className="text-sm text-muted-foreground">2025</p>
               </div>
-              <ExternalLink className="w-5 h-5 text-accent" />
+              <a
+                href="https://github.com/hussain-jawaid/chatbot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent/80 transition-colors cursor-pointer"
+              >
+                <ExternalLink className="w-5 h-5 text-accent" />
+              </a>
             </div>
             <p className="text-muted-foreground mb-4">
               AI-powered chatbot inspired by ChatGPT. Users can create accounts,
@@ -366,7 +373,14 @@ export default function Home() {
                 </h3>
                 <p className="text-sm text-muted-foreground">2025</p>
               </div>
-              <ExternalLink className="w-5 h-5 text-accent" />
+              <a
+                href="https://github.com/hussain-jawaid/medical-data-extraction"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent/80 transition-colors cursor-pointer"
+              >
+                <ExternalLink className="w-5 h-5 text-accent" />
+              </a>
             </div>
             <p className="text-muted-foreground mb-4">
               Lightweight tool for extracting key information from medical PDFs
@@ -410,7 +424,14 @@ export default function Home() {
                 </h3>
                 <p className="text-sm text-muted-foreground">2025</p>
               </div>
-              <ExternalLink className="w-5 h-5 text-accent" />
+              <a
+                href="https://github.com/hussain-jawaid/expense-management-system"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent/80 transition-colors cursor-pointer"
+              >
+                <ExternalLink className="w-5 h-5 text-accent" />
+              </a>
             </div>
             <p className="text-muted-foreground mb-4">
               Full-stack expense tracking application with category-based
