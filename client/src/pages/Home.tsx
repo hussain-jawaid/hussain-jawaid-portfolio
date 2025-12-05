@@ -246,13 +246,22 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-3">
             <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
-              Fast learner
+              Fast Learner
             </span>
             <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
-              Collaborative teammate
+              Collaborative Teammate
             </span>
             <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
-              Systems thinker
+              Systems Thinker
+            </span>
+            <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
+              Problem Solver & Critical Thinker
+            </span>
+            <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
+              Logic & Reasoning
+            </span>
+            <span className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm">
+              Adaptable & Flexible
             </span>
           </div>
         </div>
@@ -287,6 +296,7 @@ export default function Home() {
               <li>• ReactJS</li>
               <li>• MySQL</li>
               <li>• Pandas</li>
+              <li>• Tailwind CSS</li>
             </ul>
           </Card>
 
@@ -300,6 +310,7 @@ export default function Home() {
               <li>• VS Code</li>
               <li>• Cursor</li>
               <li>• PyCharm</li>
+              <li>• Jupiter Notebook</li>
             </ul>
           </Card>
         </div>
